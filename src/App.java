@@ -20,10 +20,9 @@ public class App {
         Maze maze = new Maze(laberinto);
         System.out.println("\n Laberinto: ");
         maze.printMaze(); 
-        maze.printMazeSolver(path);
 
 
-        Cell start = new Cell(0, 3);
+        Cell start = new Cell(0,3 );
         Cell end = new Cell(3, 3);
         
         List<MazeSolver> soluciones  = Arrays.asList(new MazeSolverRecursivo(), new MazeSolverBFS());

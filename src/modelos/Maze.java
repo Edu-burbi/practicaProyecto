@@ -39,11 +39,11 @@ public class Maze {
                 boolean celda = grid[j][k];
                 
                 if (isInPath(j, k, path)) {
-                    System.out.print(">"); // Imprime '>' si la celda está en el camino
+                    System.out.print(">"); 
                 } else if (celda) {
-                    System.out.print("-"); // Imprime '-' si la celda es libre
+                    System.out.print("-"); 
                 } else {
-                    System.out.print("*"); // Imprime '*' si la celda está bloqueada
+                    System.out.print("*");
                 }
             }
             System.out.println(); 
