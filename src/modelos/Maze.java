@@ -37,18 +37,23 @@ public class Maze {
         for (int j = 0; j < grid.length; j++) {
             for (int k = 0; k < grid[j].length; k++) {
                 boolean celda = grid[j][k];
-                
+    
                 if (isInPath(j, k, path)) {
-                    System.out.print(">"); 
+                    if (path.indexOf(new Cell(j, k)) < path.size() - 1) {
+                        System.out.print(" - ");  
+                    } else {
+                        System.out.print(" > ");  
+                    }
                 } else if (celda) {
-                    System.out.print("-"); 
+                    System.out.print(" - ");  
                 } else {
-                    System.out.print("*");
+                    System.out.print(" * ");  
                 }
             }
-            System.out.println(); 
+            System.out.println();
         }
     }
+    
     private boolean isInPath(int row, int col, List<Cell> path) {
         for (Cell cell : path) {
             if (cell.row == row && cell.col == col) {
