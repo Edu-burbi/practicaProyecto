@@ -9,11 +9,13 @@ import modelos.Cell;
 public class MazeSolverRecursivo implements MazeSolver {
 
     @Override
-    public List<Cell> getPath(boolean[][] grid, Cell start, Cell end) {
+    public List<Cell> getPath(Maze maze, Cell start, Cell end) {
         System.out.println("implementacion recursiva");
         List<Cell> path = new ArrayList<>();
         Set<Cell> visitadas = new HashSet<>();
         
+        boolean[][] grid = maze.getGrid();  // Obtener el grid del laberinto
+
         if (grid == null || grid.length == 0) {
             return path;
         }
@@ -49,7 +51,6 @@ public class MazeSolverRecursivo implements MazeSolver {
         return false;
     }
 }
-
 
 
 

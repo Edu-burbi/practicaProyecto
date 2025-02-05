@@ -39,21 +39,18 @@ public class Maze {
                 boolean celda = grid[j][k];
     
                 if (isInPath(j, k, path)) {
-                    if (path.indexOf(new Cell(j, k)) < path.size() - 1) {
-                        System.out.print(" - ");  
-                    } else {
-                        System.out.print(" > ");  
-                    }
+                    System.out.print(" > ");  // Camino
                 } else if (celda) {
-                    System.out.print(" - ");  
+                    System.out.print(" - ");  // Celda libre
                 } else {
-                    System.out.print(" * ");  
+                    System.out.print(" * ");  // Pared
                 }
             }
-            System.out.println();
+            System.out.println();  // Nueva línea al final de cada fila
         }
     }
     
+       
     private boolean isInPath(int row, int col, List<Cell> path) {
         for (Cell cell : path) {
             if (cell.row == row && cell.col == col) {
@@ -62,5 +59,11 @@ public class Maze {
         }
         return false; 
     }
+
+    public void updateMaze(){
+        
+    }
+    
+
  
 }    

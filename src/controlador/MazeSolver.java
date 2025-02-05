@@ -1,9 +1,9 @@
 package controlador;
 
-import java.util.List; 
-
+import java.util.List;
 import modelos.Cell;
-
+import modelos.Maze;
 public interface MazeSolver {
-    List<Cell> getPath(boolean[][] grid, Cell start, Cell end); 
+    // Cambiar la firma para que reciba el objeto Maze en lugar de boolean[][]
+    List<Cell> getPath(Maze maze, Cell start, Cell end); 
 }
