@@ -1,5 +1,6 @@
 package controlador;
 
+import controlador.interfaces.MazeSolver;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -12,9 +13,8 @@ import modelos.Maze;
 public class MazeSolverBFS implements MazeSolver {
 
     @Override
-    public List<Cell> getPath(Maze maze, Cell start, Cell end) {
+    public List<Cell> getPath(Maze maze, boolean[][] grid, Cell start, Cell end){
         System.out.println("implementación BFS");
-        boolean[][] grid = maze.getGrid();  // Obtener la matriz booleana del laberinto
         Queue<Cell> queue = new LinkedList<>();
         Map<Cell, Cell> predecesores = new HashMap<>();
         List<Cell> path = new ArrayList<>();

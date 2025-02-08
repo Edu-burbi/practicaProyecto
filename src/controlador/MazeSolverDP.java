@@ -1,5 +1,6 @@
 package controlador;
 
+import controlador.interfaces.MazeSolver;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,9 +17,8 @@ public class MazeSolverDP implements MazeSolver {
     private Set<Cell> visitadas = new HashSet<>();
 
     @Override
-    public List<Cell> getPath(Maze maze, Cell start, Cell end) {
+    public List<Cell> getPath(Maze maze, boolean[][] grid, Cell start, Cell end){
         List<Cell> path = new ArrayList<>();
-        boolean[][] grid = maze.getGrid();  // Obtener el grid del laberinto
 
         if (grid == null || grid.length == 0) {
             return path; 

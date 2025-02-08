@@ -14,8 +14,10 @@ public class Cell {
     }
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this == obj) 
+        return true;
+        if (obj == null || getClass() != obj.getClass()) 
+        return false;
         Cell cell = (Cell) obj;
         return row == cell.row && col == cell.col;
     }
